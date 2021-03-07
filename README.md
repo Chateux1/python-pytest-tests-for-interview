@@ -52,10 +52,12 @@ I have decided to cover these flows as they seem to be very important and would 
 4.	Not all fields are checked if they have correct information after user registration.
 
 1st issue could be covered by refactoring the logging in test to a DDT and provide invalid information. 2nd, 3rd and 4th issues could be covered by expanding the existing tests. Based on this analysis I would say that these flows are covered around 60%.
+
 ##Improvements
 - As this is my first experience with Python, pytest and DDT, I am not sure whether the DDT scenario is made in a good way. The assertion part seems kind of strange and complicated. The whole test is missing some logging information which would provide valuable information in the case of the test failing. 
 - I am not sure about the usage of fixtures for the driver setup and teardown, maybe there is a better way to do this.
 - I believe that POM classes could have static methods, but I was not able to make it work.
+
 ##Difficulties
 - I tried implementing logging information during the tests but ran into difficulties with making it work and decided to not do it. 
 - I ran into an issue when providing paths for different files that are used by the tests: when “.\\location\\file” notation is used then the tests are working when called through the console, but when “../location/file” notation is used then the tests work when right clicking on a test title in PyCharm and running them through there. I did not find a way to make them work both ways, but I guess it should be possible. I decided to leave them to work when running though the console.
